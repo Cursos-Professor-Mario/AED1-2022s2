@@ -1,0 +1,8 @@
+usaPilha: usaPilha.o pilha.o
+	gcc usaPilha.o pilha.o -o usaPilha
+
+usaPilha.o: usaPilha.c pilha.h
+	gcc -Wall -O2 -pedantic -Wno-unused-result -c usaPilha.c
+
+pilha.o: pilha.c pilha.h 
+	gcc -Wall -O2 -pedantic -Wno-unused-result -c pilha.c
